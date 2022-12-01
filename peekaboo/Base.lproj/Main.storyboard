@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -16,13 +17,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="g7l-dU-KoX">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GaJ-Ic-uBW" userLabel="letsPlayView">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="120"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="142"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LET'S PLAY " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QK1-cZ-i53">
-                                                <rect key="frame" x="33" y="67.5" width="254.5" height="52.5"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LET'S PLAY " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QK1-cZ-i53" userLabel="letsPlay">
+                                                <rect key="frame" x="33" y="89.5" width="254.5" height="52.5"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="45"/>
                                                 <color key="textColor" red="0.96607202290000005" green="0.96607202290000005" blue="0.96607202290000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -34,7 +35,7 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hjO-Fw-sjn" userLabel="PeekaBooView">
-                                        <rect key="frame" x="0.0" y="120" width="320" height="120"/>
+                                        <rect key="frame" x="0.0" y="142" width="320" height="142"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PEEK A BOO" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BDo-XK-mWX">
                                                 <rect key="frame" x="26" y="0.0" width="268" height="52.5"/>
@@ -49,7 +50,7 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jMO-Zl-t5p" userLabel="startButton View">
-                                        <rect key="frame" x="0.0" y="240" width="320" height="120"/>
+                                        <rect key="frame" x="0.0" y="284" width="320" height="142"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yYP-nZ-aAA">
                                                 <rect key="frame" x="35" y="0.0" width="250" height="75"/>
@@ -66,7 +67,7 @@
                                                     <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </buttonConfiguration>
                                                 <connections>
-                                                    <action selector="pressStart:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4Bz-Uv-rYT"/>
+                                                    <segue destination="3QZ-pk-hdb" kind="showDetail" id="71h-OA-1GM"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -76,7 +77,7 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XR3-ee-YIG" userLabel="LogoView">
-                                        <rect key="frame" x="0.0" y="360" width="320" height="120"/>
+                                        <rect key="frame" x="0.0" y="426" width="320" height="142"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo wo Text" translatesAutoresizingMaskIntoConstraints="NO" id="juS-lv-AJE">
                                                 <rect key="frame" x="-6.5" y="10" width="333" height="100"/>
@@ -105,16 +106,131 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="startButton" destination="yYP-nZ-aAA" id="0hl-NL-clE"/>
+                        <outlet property="logo" destination="juS-lv-AJE" id="l8W-IK-gg9"/>
+                        <outlet property="peekaboo" destination="BDo-XK-mWX" id="MBf-LH-r42"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="63.358778625954194" y="-9.1549295774647899"/>
         </scene>
+        <!--animalCard-->
+        <scene sceneID="n64-Gm-IgL">
+            <objects>
+                <viewController title="animalCard" id="5fe-2B-gcR" customClass="animalViewController" customModule="peekaboo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jy9-Zu-T04">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HkZ-1s-6Fa" userLabel="card">
+                                <rect key="frame" x="15" y="30" width="290" height="508"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Animals/Bird" translatesAutoresizingMaskIntoConstraints="NO" id="V8F-hq-uFm" userLabel="image">
+                                        <rect key="frame" x="0.0" y="0.0" width="290" height="433"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DUCK" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fmS-gp-Q2h" userLabel="animal">
+                                        <rect key="frame" x="20" y="457" width="85" height="36"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="playSoundButton" translatesAutoresizingMaskIntoConstraints="NO" id="347-CU-Cy8">
+                                        <rect key="frame" x="245" y="453" width="40" height="47"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="347-CU-Cy8" firstAttribute="top" secondItem="V8F-hq-uFm" secondAttribute="bottom" constant="20" id="7Ug-GQ-h4g"/>
+                                    <constraint firstItem="fmS-gp-Q2h" firstAttribute="leading" secondItem="HkZ-1s-6Fa" secondAttribute="leading" constant="20" id="8nW-dx-HrO"/>
+                                    <constraint firstAttribute="bottom" secondItem="347-CU-Cy8" secondAttribute="bottom" constant="8" id="GyJ-Qk-EJa"/>
+                                    <constraint firstItem="V8F-hq-uFm" firstAttribute="top" secondItem="HkZ-1s-6Fa" secondAttribute="top" id="dki-LI-0GE"/>
+                                    <constraint firstAttribute="bottom" secondItem="fmS-gp-Q2h" secondAttribute="bottom" constant="15" id="eRa-pK-GZb"/>
+                                    <constraint firstItem="V8F-hq-uFm" firstAttribute="leading" secondItem="HkZ-1s-6Fa" secondAttribute="leading" id="gTt-FE-7B0"/>
+                                    <constraint firstAttribute="bottom" secondItem="V8F-hq-uFm" secondAttribute="bottom" constant="75" id="jxQ-iV-3bk"/>
+                                    <constraint firstAttribute="trailing" secondItem="347-CU-Cy8" secondAttribute="trailing" constant="5" id="pyp-up-DC9"/>
+                                    <constraint firstAttribute="trailing" secondItem="V8F-hq-uFm" secondAttribute="trailing" id="qsL-Nv-8V3"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="GH9-9y-Xle"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="HkZ-1s-6Fa" firstAttribute="centerY" secondItem="jy9-Zu-T04" secondAttribute="centerY" id="EXT-ZD-MwN"/>
+                            <constraint firstItem="HkZ-1s-6Fa" firstAttribute="leading" secondItem="GH9-9y-Xle" secondAttribute="leading" constant="15" id="QWZ-Yl-9Wf"/>
+                            <constraint firstItem="GH9-9y-Xle" firstAttribute="bottom" secondItem="HkZ-1s-6Fa" secondAttribute="bottom" constant="30" id="Urf-bv-aop"/>
+                            <constraint firstItem="HkZ-1s-6Fa" firstAttribute="centerX" secondItem="jy9-Zu-T04" secondAttribute="centerX" id="gY0-f6-WED"/>
+                            <constraint firstItem="GH9-9y-Xle" firstAttribute="trailing" secondItem="HkZ-1s-6Fa" secondAttribute="trailing" constant="15" id="jqg-fw-XjJ"/>
+                            <constraint firstItem="HkZ-1s-6Fa" firstAttribute="top" secondItem="GH9-9y-Xle" secondAttribute="top" constant="30" id="snI-9X-RzE"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IGp-Hj-LrW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1320" y="-10.56338028169014"/>
+        </scene>
+        <!--peopleCard-->
+        <scene sceneID="3ya-fA-gY4">
+            <objects>
+                <viewController title="peopleCard" id="3QZ-pk-hdb" customClass="peopleViewController" customModule="peekaboo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FJQ-BZ-Boh">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CBe-De-aA5">
+                                <rect key="frame" x="15" y="30" width="290" height="488"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="People/8" translatesAutoresizingMaskIntoConstraints="NO" id="iYr-lP-9Xx">
+                                        <rect key="frame" x="0.0" y="0.0" width="290" height="488"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="iYr-lP-9Xx" secondAttribute="bottom" id="2hN-KC-B4s"/>
+                                    <constraint firstItem="iYr-lP-9Xx" firstAttribute="centerX" secondItem="CBe-De-aA5" secondAttribute="centerX" id="O8N-lz-e6T"/>
+                                    <constraint firstAttribute="trailing" secondItem="iYr-lP-9Xx" secondAttribute="trailing" id="flS-Zi-rmw"/>
+                                    <constraint firstItem="iYr-lP-9Xx" firstAttribute="leading" secondItem="CBe-De-aA5" secondAttribute="leading" id="tv6-Nv-f9V"/>
+                                    <constraint firstItem="iYr-lP-9Xx" firstAttribute="centerY" secondItem="CBe-De-aA5" secondAttribute="centerY" id="v5u-Ew-qZs"/>
+                                    <constraint firstItem="iYr-lP-9Xx" firstAttribute="top" secondItem="CBe-De-aA5" secondAttribute="top" id="vOG-sK-EAX"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="S4X-ge-fX6"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="CBe-De-aA5" firstAttribute="top" secondItem="S4X-ge-fX6" secondAttribute="top" constant="30" id="QCV-dq-I3o"/>
+                            <constraint firstItem="CBe-De-aA5" firstAttribute="leading" secondItem="S4X-ge-fX6" secondAttribute="leading" constant="15" id="eYn-vg-xqz"/>
+                            <constraint firstItem="S4X-ge-fX6" firstAttribute="trailing" secondItem="CBe-De-aA5" secondAttribute="trailing" constant="15" id="i3v-hK-3hh"/>
+                            <constraint firstItem="CBe-De-aA5" firstAttribute="centerY" secondItem="FJQ-BZ-Boh" secondAttribute="centerY" id="jrA-je-qkt"/>
+                            <constraint firstItem="S4X-ge-fX6" firstAttribute="bottom" secondItem="CBe-De-aA5" secondAttribute="bottom" constant="30" id="q3u-Uv-C4t"/>
+                            <constraint firstItem="CBe-De-aA5" firstAttribute="centerX" secondItem="FJQ-BZ-Boh" secondAttribute="centerX" id="vuK-Ie-jUV"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Cu1-QT-tzW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="684.375" y="-10.56338028169014"/>
+        </scene>
     </scenes>
     <color key="tintColor" red="0.96607202290000005" green="0.96607202290000005" blue="0.96607202290000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
     <resources>
+        <image name="Animals/Bird" width="2403" height="3605"/>
         <image name="Logo wo Text" width="333" height="333"/>
+        <image name="People/8" width="2399" height="2667"/>
+        <image name="playSoundButton" width="40" height="40"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>

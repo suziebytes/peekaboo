@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2B249F632938231800E980C5 /* peopleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B249F622938231800E980C5 /* peopleViewController.swift */; };
+		2B249F652938243900E980C5 /* animalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B249F642938243900E980C5 /* animalViewController.swift */; };
 		2B3A679C2934704800317EDC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3A679B2934704800317EDC /* AppDelegate.swift */; };
 		2B3A679E2934704800317EDC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3A679D2934704800317EDC /* SceneDelegate.swift */; };
 		2B3A67A02934704800317EDC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3A679F2934704800317EDC /* ViewController.swift */; };
@@ -16,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2B249F622938231800E980C5 /* peopleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = peopleViewController.swift; sourceTree = "<group>"; };
+		2B249F642938243900E980C5 /* animalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = animalViewController.swift; sourceTree = "<group>"; };
 		2B3A67982934704800317EDC /* peekaboo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = peekaboo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B3A679B2934704800317EDC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2B3A679D2934704800317EDC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,6 +63,8 @@
 				2B3A679B2934704800317EDC /* AppDelegate.swift */,
 				2B3A679D2934704800317EDC /* SceneDelegate.swift */,
 				2B3A679F2934704800317EDC /* ViewController.swift */,
+				2B249F622938231800E980C5 /* peopleViewController.swift */,
+				2B249F642938243900E980C5 /* animalViewController.swift */,
 				2B3A67A12934704800317EDC /* Main.storyboard */,
 				2B3A67A42934704A00317EDC /* Assets.xcassets */,
 				2B3A67A62934704A00317EDC /* LaunchScreen.storyboard */,
@@ -139,6 +145,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				2B3A67A02934704800317EDC /* ViewController.swift in Sources */,
+				2B249F652938243900E980C5 /* animalViewController.swift in Sources */,
+				2B249F632938231800E980C5 /* peopleViewController.swift in Sources */,
 				2B3A679C2934704800317EDC /* AppDelegate.swift in Sources */,
 				2B3A679E2934704800317EDC /* SceneDelegate.swift in Sources */,
 			);
