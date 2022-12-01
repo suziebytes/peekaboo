@@ -8,8 +8,13 @@
 import UIKit
 class peopleViewController: UIViewController {
     //create tapping gesture
+
+    
+    //let people = UIImage(randomPeople.jpeg)
+    // generates a number that is
+    //let randomPeople =  Int.random(in: 1..<21)
+    
    
-    @IBOutlet weak var tapScreen: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()

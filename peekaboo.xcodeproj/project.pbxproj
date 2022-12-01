@@ -20,7 +20,7 @@
 /* Begin PBXFileReference section */
 		2B249F622938231800E980C5 /* peopleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = peopleViewController.swift; sourceTree = "<group>"; };
 		2B249F642938243900E980C5 /* animalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = animalViewController.swift; sourceTree = "<group>"; };
-		2B3A67982934704800317EDC /* peekaboo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = peekaboo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2B3A67982934704800317EDC /* Parker Plays.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Parker Plays.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B3A679B2934704800317EDC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2B3A679D2934704800317EDC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		2B3A679F2934704800317EDC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -52,7 +52,7 @@
 		2B3A67992934704800317EDC /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				2B3A67982934704800317EDC /* peekaboo.app */,
+				2B3A67982934704800317EDC /* Parker Plays.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -90,7 +90,7 @@
 			);
 			name = peekaboo;
 			productName = peekaboo;
-			productReference = 2B3A67982934704800317EDC /* peekaboo.app */;
+			productReference = 2B3A67982934704800317EDC /* Parker Plays.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -309,7 +309,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.susiechhuor.peekaboo;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Parker Plays";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -337,7 +337,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.susiechhuor.peekaboo;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Parker Plays";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

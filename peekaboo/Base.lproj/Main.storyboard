@@ -119,23 +119,23 @@
             <objects>
                 <viewController title="animalCard" id="5fe-2B-gcR" customClass="animalViewController" customModule="peekaboo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jy9-Zu-T04">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HkZ-1s-6Fa" userLabel="card">
-                                <rect key="frame" x="15" y="30" width="290" height="508"/>
+                                <rect key="frame" x="15" y="30" width="290" height="488"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Animals/Bird" translatesAutoresizingMaskIntoConstraints="NO" id="V8F-hq-uFm" userLabel="image">
-                                        <rect key="frame" x="0.0" y="0.0" width="290" height="433"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="290" height="413"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DUCK" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fmS-gp-Q2h" userLabel="animal">
-                                        <rect key="frame" x="20" y="457" width="85" height="36"/>
+                                        <rect key="frame" x="20" y="437" width="85" height="36"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="playSoundButton" translatesAutoresizingMaskIntoConstraints="NO" id="347-CU-Cy8">
-                                        <rect key="frame" x="245" y="453" width="40" height="47"/>
+                                        <rect key="frame" x="245" y="433" width="40" height="47"/>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -185,18 +185,32 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CBe-De-aA5">
                                 <rect key="frame" x="15" y="30" width="290" height="488"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="People/8" translatesAutoresizingMaskIntoConstraints="NO" id="iYr-lP-9Xx">
+                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="People/8" translatesAutoresizingMaskIntoConstraints="NO" id="iYr-lP-9Xx">
                                         <rect key="frame" x="0.0" y="0.0" width="290" height="488"/>
+                                        <gestureRecognizers/>
                                     </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j6m-ea-2PD">
+                                        <rect key="frame" x="0.0" y="0.0" width="290" height="488"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain"/>
+                                        <connections>
+                                            <segue destination="5fe-2B-gcR" kind="showDetail" id="ZIC-o5-BgO"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="iYr-lP-9Xx" secondAttribute="bottom" id="2hN-KC-B4s"/>
+                                    <constraint firstAttribute="bottom" secondItem="j6m-ea-2PD" secondAttribute="bottom" id="AOw-oK-qo6"/>
                                     <constraint firstItem="iYr-lP-9Xx" firstAttribute="centerX" secondItem="CBe-De-aA5" secondAttribute="centerX" id="O8N-lz-e6T"/>
+                                    <constraint firstItem="j6m-ea-2PD" firstAttribute="leading" secondItem="CBe-De-aA5" secondAttribute="leading" id="OEb-6z-78Q"/>
                                     <constraint firstAttribute="trailing" secondItem="iYr-lP-9Xx" secondAttribute="trailing" id="flS-Zi-rmw"/>
+                                    <constraint firstItem="j6m-ea-2PD" firstAttribute="top" secondItem="CBe-De-aA5" secondAttribute="top" id="me6-mK-cIL"/>
                                     <constraint firstItem="iYr-lP-9Xx" firstAttribute="leading" secondItem="CBe-De-aA5" secondAttribute="leading" id="tv6-Nv-f9V"/>
                                     <constraint firstItem="iYr-lP-9Xx" firstAttribute="centerY" secondItem="CBe-De-aA5" secondAttribute="centerY" id="v5u-Ew-qZs"/>
                                     <constraint firstItem="iYr-lP-9Xx" firstAttribute="top" secondItem="CBe-De-aA5" secondAttribute="top" id="vOG-sK-EAX"/>
+                                    <constraint firstAttribute="trailing" secondItem="j6m-ea-2PD" secondAttribute="trailing" id="y8R-4E-LzV"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -208,6 +222,7 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="S4X-ge-fX6"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="CBe-De-aA5" firstAttribute="top" secondItem="S4X-ge-fX6" secondAttribute="top" constant="30" id="QCV-dq-I3o"/>
                             <constraint firstItem="CBe-De-aA5" firstAttribute="leading" secondItem="S4X-ge-fX6" secondAttribute="leading" constant="15" id="eYn-vg-xqz"/>
