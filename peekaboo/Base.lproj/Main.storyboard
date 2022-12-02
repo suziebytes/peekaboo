@@ -11,7 +11,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="peekaboo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Parker_Plays" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -117,7 +117,7 @@
         <!--animalCard-->
         <scene sceneID="n64-Gm-IgL">
             <objects>
-                <viewController title="animalCard" id="5fe-2B-gcR" customClass="animalViewController" customModule="peekaboo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="animalCard" id="5fe-2B-gcR" customClass="animalViewController" customModule="Parker_Plays" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jy9-Zu-T04">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -125,11 +125,11 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HkZ-1s-6Fa" userLabel="card">
                                 <rect key="frame" x="15" y="30" width="290" height="488"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Animals/Bird" translatesAutoresizingMaskIntoConstraints="NO" id="V8F-hq-uFm" userLabel="image">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Bird" translatesAutoresizingMaskIntoConstraints="NO" id="V8F-hq-uFm" userLabel="image">
                                         <rect key="frame" x="0.0" y="0.0" width="290" height="413"/>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DUCK" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fmS-gp-Q2h" userLabel="animal">
-                                        <rect key="frame" x="20" y="437" width="85" height="36"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BIRD" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fmS-gp-Q2h" userLabel="animal">
+                                        <rect key="frame" x="20" y="437" width="69" height="36"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -137,15 +137,32 @@
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="playSoundButton" translatesAutoresizingMaskIntoConstraints="NO" id="347-CU-Cy8">
                                         <rect key="frame" x="245" y="433" width="40" height="47"/>
                                     </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HU8-W5-5Sx" userLabel="buttonBackToPeople">
+                                        <rect key="frame" x="0.0" y="0.0" width="290" height="413"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain">
+                                            <backgroundConfiguration key="background"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="onAnimalTap:" destination="5fe-2B-gcR" eventType="touchUpInside" id="i74-TO-9rD"/>
+                                            <segue destination="3QZ-pk-hdb" kind="showDetail" id="cJm-3i-HJh"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="347-CU-Cy8" firstAttribute="top" secondItem="V8F-hq-uFm" secondAttribute="bottom" constant="20" id="7Ug-GQ-h4g"/>
+                                    <constraint firstItem="HU8-W5-5Sx" firstAttribute="leading" secondItem="HkZ-1s-6Fa" secondAttribute="leading" id="7gS-5d-Zud"/>
                                     <constraint firstItem="fmS-gp-Q2h" firstAttribute="leading" secondItem="HkZ-1s-6Fa" secondAttribute="leading" constant="20" id="8nW-dx-HrO"/>
                                     <constraint firstAttribute="bottom" secondItem="347-CU-Cy8" secondAttribute="bottom" constant="8" id="GyJ-Qk-EJa"/>
+                                    <constraint firstItem="HU8-W5-5Sx" firstAttribute="centerX" secondItem="HkZ-1s-6Fa" secondAttribute="centerX" id="QC9-Ya-UKc"/>
+                                    <constraint firstItem="HU8-W5-5Sx" firstAttribute="top" secondItem="HkZ-1s-6Fa" secondAttribute="top" id="Rme-zk-aIa"/>
+                                    <constraint firstAttribute="trailing" secondItem="HU8-W5-5Sx" secondAttribute="trailing" id="ZKk-rh-9eR"/>
                                     <constraint firstItem="V8F-hq-uFm" firstAttribute="top" secondItem="HkZ-1s-6Fa" secondAttribute="top" id="dki-LI-0GE"/>
                                     <constraint firstAttribute="bottom" secondItem="fmS-gp-Q2h" secondAttribute="bottom" constant="15" id="eRa-pK-GZb"/>
+                                    <constraint firstItem="HU8-W5-5Sx" firstAttribute="centerY" secondItem="HkZ-1s-6Fa" secondAttribute="centerY" id="frq-bu-oGj"/>
                                     <constraint firstItem="V8F-hq-uFm" firstAttribute="leading" secondItem="HkZ-1s-6Fa" secondAttribute="leading" id="gTt-FE-7B0"/>
+                                    <constraint firstAttribute="bottom" secondItem="HU8-W5-5Sx" secondAttribute="bottom" constant="75" id="izi-S3-i3n"/>
                                     <constraint firstAttribute="bottom" secondItem="V8F-hq-uFm" secondAttribute="bottom" constant="75" id="jxQ-iV-3bk"/>
                                     <constraint firstAttribute="trailing" secondItem="347-CU-Cy8" secondAttribute="trailing" constant="5" id="pyp-up-DC9"/>
                                     <constraint firstAttribute="trailing" secondItem="V8F-hq-uFm" secondAttribute="trailing" id="qsL-Nv-8V3"/>
@@ -169,15 +186,18 @@
                             <constraint firstItem="HkZ-1s-6Fa" firstAttribute="top" secondItem="GH9-9y-Xle" secondAttribute="top" constant="30" id="snI-9X-RzE"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="backToPeopleView" destination="HU8-W5-5Sx" id="cfE-f6-Rzl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IGp-Hj-LrW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1320" y="-10.56338028169014"/>
+            <point key="canvasLocation" x="1583" y="-11"/>
         </scene>
         <!--peopleCard-->
         <scene sceneID="3ya-fA-gY4">
             <objects>
-                <viewController title="peopleCard" id="3QZ-pk-hdb" customClass="peopleViewController" customModule="peekaboo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="peopleCard" id="3QZ-pk-hdb" customClass="peopleViewController" customModule="Parker_Plays" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="FJQ-BZ-Boh">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -232,15 +252,21 @@
                             <constraint firstItem="CBe-De-aA5" firstAttribute="centerX" secondItem="FJQ-BZ-Boh" secondAttribute="centerX" id="vuK-Ie-jUV"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="peopleImage" destination="iYr-lP-9Xx" id="F2t-e5-OwK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cu1-QT-tzW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="684.375" y="-10.56338028169014"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="cJm-3i-HJh"/>
+    </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.96607202290000005" green="0.96607202290000005" blue="0.96607202290000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
     <resources>
-        <image name="Animals/Bird" width="2403" height="3605"/>
+        <image name="Bird" width="2403" height="3605"/>
         <image name="Logo wo Text" width="333" height="333"/>
         <image name="People/8" width="2399" height="2667"/>
         <image name="playSoundButton" width="40" height="40"/>
